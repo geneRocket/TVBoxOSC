@@ -25,12 +25,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - userName: q215613905
+          - userName: geneRocket
             repoName: TVBoxOS
-            branchName: main
-          - userName: takagen99
-            repoName: Box
-            branchName: main
+            branchName: dev
     steps:
       - name: Checkout
         uses: actions/checkout@v3
