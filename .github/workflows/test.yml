@@ -96,6 +96,7 @@ jobs:
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
         run: |
+          mkdir -p .android && touch ~/.android/repositories.cfg
           chmod +x gradlew
           ./gradlew assemblerelease --build-cache --parallel --daemon --warning-mode all
       - name: Prepare App
