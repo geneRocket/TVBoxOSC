@@ -17,6 +17,10 @@ on:
         description: 'arm64支持，不支持ijk解码'
         required: false
         type: boolean
+      build_branch_name:
+          description: '编译分支'
+          required: false
+          default: 'dev'
 
 jobs:
   build:
@@ -27,7 +31,7 @@ jobs:
         include:
           - userName: geneRocket
             repoName: TVBoxOS
-            branchName: dev
+            branchName: ${{ inputs.my_string_input }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
