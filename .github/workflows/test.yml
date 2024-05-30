@@ -17,6 +17,14 @@ on:
         description: 'arm64支持，不支持ijk解码'
         required: false
         type: boolean
+      build_user_name:
+          description: '用户'
+          required: false
+          default: 'geneRocket'
+      build_repo_name:
+          description: '仓库'
+          required: false
+          default: 'TVBoxOS'
       build_branch_name:
           description: '编译分支'
           required: false
@@ -29,8 +37,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - userName: geneRocket
-            repoName: TVBoxOS
+          - userName: ${{ inputs.build_user_name }}
+            repoName: ${{ inputs.build_repo_name }}
             branchName: ${{ inputs.build_branch_name }}
     steps:
       - name: Checkout
