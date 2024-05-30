@@ -67,7 +67,7 @@ jobs:
         run: |
           echo '修改VersionName'
           sed -i "/versionName/s#[0-9a-zA-Z_\.\'\"-]\+\$#\'${{ env.tag }}\'#" app/build.gradle
-          if: [ -f app/src/main/res/layout/dialog_about.xml ]; then
+          if [ -f app/src/main/res/layout/dialog_about.xml ]; then
             sed -i "/android:text=/s#=\"#=\"${{ env.tag }}\\\\n\\\\n#" app/src/main/res/layout/dialog_about.xml
           fi
           echo 'crosswalk源，防挂'
