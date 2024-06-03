@@ -112,11 +112,8 @@ jobs:
         run: |
           mkdir -p ~/.android && touch ~/.android/repositories.cfg
           chmod +x gradlew
-          if ${{ matrix.repoName }} == "TVBoxOS" ; then
-            ./gradlew assemblerelease --build-cache --parallel --daemon --warning-mode all
-          else
-            ./gradlew leanbackPythonArmeabi_v7a --build-cache --parallel --daemon --warning-mode all
-          fi
+          ./gradlew assembleleanbackPythonArmeabi_v7aRelease --build-cache --parallel --daemon --warning-mode all
+          
       - name: Prepare App
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
