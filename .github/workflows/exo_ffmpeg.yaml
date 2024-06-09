@@ -10,11 +10,11 @@ on:
       ANDROID_ABI:
         description: "ANDROID_ABI"
         required: true
-        default: '34'
+        default: '28'
       ENABLED_DECODERS:
         description: "ENABLED_DECODERS"
         required: true
-        default: 'vorbis opus flac alac pcm_mulaw pcm_alaw mp3 amrnb amrwb aac ac3 eac3 dca mlp truehd'
+        default: 'vorbis opus flac alac pcm_mulaw pcm_alaw mp3 amrnb amrwb aac ac3 eac3 dca mlp truehd H.264 HEVC VP8 VP9'
       FFMPEG_RELEASE_BRANCH:
         description: "FFMPEG_RELEASE_BRANCH"
         required: true
