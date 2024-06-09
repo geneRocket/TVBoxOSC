@@ -67,11 +67,11 @@ jobs:
           
           SO_PATH= "$GITHUB_WORKSPACE"/media/libraries/decoder_ffmpeg/ffmpeg/android-libs
           
-          cd "$SO_PATH"/armeabi-v7a
+          cd "${SO_PATH}/armeabi-v7a"
           ar x *.a
           gcc -shared -o ffmpeg.so *.o
-
-          cd "$SO_PATH"/arm64-v8a
+          
+          cd "${SO_PATH}/arm64-v8a"
           ar x *.a
           gcc -shared -o ffmpeg.so *.o
           
