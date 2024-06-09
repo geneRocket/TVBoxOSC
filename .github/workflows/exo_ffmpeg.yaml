@@ -70,4 +70,4 @@ jobs:
         with:
           name: Media3 Exoplayer FFmpeg
           path: |
-            media/libraries/decoder_ffmpeg/ffmpeg/android-libs/*
+            media/libraries/decoder_ffmpeg/ffmpeg/android-libs/**/*.so
