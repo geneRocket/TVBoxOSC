@@ -157,7 +157,7 @@ jobs:
           allowUpdates: true
           removeArtifacts: true
           artifacts: |
-            TVBoxOSC/apk/*.apk
+            TVBoxOSC/**/*.apk
             TVBoxOSC/source-${{ env.commitS }}.*
       - name: Post To Telegram
         if: ${{ env.commit }}
