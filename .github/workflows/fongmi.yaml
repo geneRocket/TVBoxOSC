@@ -142,7 +142,7 @@ jobs:
         with:
           name: ${{ matrix.userName }}-${{ matrix.repoName }}
           path: |
-            TVBoxOSC/**/*.apk
+            TVBoxOSC/*release*/*.apk
       - name: Whether Or Not to Publish
         if: ${{ inputs.donotpublish && env.commit }}
         run: |
@@ -158,7 +158,6 @@ jobs:
           removeArtifacts: true
           artifacts: |
             TVBoxOSC/**/*.apk
-            TVBoxOSC/source-${{ env.commitS }}.*
       - name: Post To Telegram
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
