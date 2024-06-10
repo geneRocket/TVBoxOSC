@@ -118,7 +118,7 @@ jobs:
         run: |
           mkdir -p ~/.android && touch ~/.android/repositories.cfg
           chmod +x gradlew
-          ./gradlew assembleRelease --build-cache --parallel --daemon --warning-mode all
+          ./gradlew assembleLeanbackPythonArmeabi_v7aRelease  --build-cache --parallel --daemon --warning-mode all
           
       - name: Prepare App
         if: ${{ env.commit }}
