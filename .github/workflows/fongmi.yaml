@@ -142,7 +142,7 @@ jobs:
         with:
           name: ${{ matrix.userName }}-${{ matrix.repoName }}
           path: |
-            TVBoxOSC/apk/*
+            TVBoxOSC/**/*.apk
       - name: Whether Or Not to Publish
         if: ${{ inputs.donotpublish && env.commit }}
         run: |
