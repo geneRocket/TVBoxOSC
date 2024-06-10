@@ -24,7 +24,7 @@ on:
       build_repo_name:
           description: '仓库'
           required: false
-          default: 'TVBoxOS'
+          default: 'TV'
       build_branch_name:
           description: '编译分支'
           required: false
