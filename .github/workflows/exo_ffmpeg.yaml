@@ -47,7 +47,7 @@ jobs:
           cd "$GITHUB_WORKSPACE"
           git clone https://github.com/androidx/media -b release
           cd media/libraries/decoder_ffmpeg
-          git clone git://source.ffmpeg.org/ffmpeg
+          git clone  -b release/${{ github.event.inputs.FFMPEG_RELEASE_BRANCH }} --depth 1   git://source.ffmpeg.org/ffmpeg
 
       - name: Build Media3 Exoplayer FFmpeg
         run: |
